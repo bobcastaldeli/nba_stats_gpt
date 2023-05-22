@@ -4,3 +4,6 @@ database:
   host: localhost
   port: 5432
   name: nba
+llm:
+  modelname: davinci
+  temperature: 0
