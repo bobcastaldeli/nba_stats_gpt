@@ -25,7 +25,9 @@ def model(question: str):
     Função que cria o modelo de consulta da base de dados.
     """
     llm = ChatOpenAI(
-        temperature=0, openai_api_key=config["openai"]["openaikey"]
+        model_name="davinci",
+        temperature=0,
+        openai_api_key=config["openai"]["openaikey"],
     )
     db = SQLDatabase.from_uri(
         f"postgresql+psycopg2://{USER}:{PWD}@{HOST}:{PORT}/{DB}"
